@@ -1,1 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>WOS Voice Countdown | Whiteout Survival Discord Bot</title>
+
+  <meta name="description"
+        content="WOS Voice Countdown is a fast Discord voice countdown bot built for Whiteout Survival communities, rallies and coordinated events.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: #0b1020;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(1050px, 90%);
+      margin: auto;
+    }
+
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid #202a44;
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 90px 0 70px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 1.05;
+      margin: 0 0 20px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 32px;
+      color: #b9c2d8;
+      font-size: 19px;
+    }
+
+    .price {
+      font-size: 30px;
+      font-weight: 800;
+      margin: 20px 0 28px;
+    }
+
+    .price span {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      color: #9da8c1;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .primary {
+      background: #5865f2;
+      color: white;
+    }
+
+    .secondary {
+      border: 1px solid #46516c;
+      color: white;
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 35px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: #121a2e;
+      border: 1px solid #26304a;
+      border-radius: 14px;
+      padding: 24px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .card p {
+      color: #aeb8cf;
+      margin-bottom: 0;
+    }
+
+    .steps {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .step {
+      margin-bottom: 18px;
+      padding: 20px;
+      background: #121a2e;
+      border-radius: 12px;
+      border: 1px solid #26304a;
+    }
+
+    .notice {
+      max-width: 700px;
+      margin: 30px auto 0;
+      text-align: center;
+      color: #9da8c1;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      color: #8792aa;
+      border-top: 1px solid #202a44;
+      padding: 35px 0;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #aeb8cf;
+      margin: 0 8px;
+    }
+
+    @media (max-width: 750px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <div class="brand">❄️ WOS Voice Countdown</div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+
+      <h1>
+        Voice countdowns.<br>
+        Built for Whiteout Survival.
+      </h1>
+
+      <p>
+        A fast Discord voice countdown bot designed for
+        Whiteout Survival communities, rallies and coordinated events.
+      </p>
+
+      <div class="price">
+        $9.99
+        <span>
+          One-time payment · Lifetime access · One Discord server
+        </span>
+      </div>
+
+      <div class="buttons">
+
+        <a class="button primary"
+           href="https://discord.com/oauth2/authorize?client_id=1553024437824131072&permissions=3230720&integration_type=0&scope=bot+applications.commands"
+           target="_blank"
+           rel="noopener">
+          Add to Discord
+        </a>
+
+        <a class="button secondary" href="#how">
+          How it works
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container">
+
+      <h2>Built for Whiteout Survival coordination</h2>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>🔊 Voice Countdown</h3>
+          <p>
+            The bot joins your Discord voice channel and performs
+            clear English countdowns for your Whiteout Survival team.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>⚡ Fast Response</h3>
+          <p>
+            Pre-generated local audio provides fast and consistent
+            countdown playback without generating audio during use.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🎛️ Simple Controls</h3>
+          <p>
+            Join, leave, stop and start countdowns directly from
+            an easy-to-use Discord control panel.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="how">
+    <div class="container">
+
+      <h2>How it works</h2>
+
+      <div class="steps">
+
+        <div class="step">
+          <strong>1. Purchase a license</strong><br>
+          Purchase one lifetime license for one Discord server.
+        </div>
+
+        <div class="step">
+          <strong>2. Add WOS Voice Countdown</strong><br>
+          Authorize the bot for the Discord server where your
+          Whiteout Survival community plays.
+        </div>
+
+        <div class="step">
+          <strong>3. Open the control panel</strong><br>
+          Run <strong>/panel</strong> in your Discord server to
+          open the countdown controls.
+        </div>
+
+        <div class="step">
+          <strong>4. Join a voice channel</strong><br>
+          Enter your Discord voice channel and press
+          <strong>Join</strong>.
+        </div>
+
+        <div class="step">
+          <strong>5. Start your countdown</strong><br>
+          Select the countdown you need and WOS Voice Countdown
+          will play it directly in your voice channel.
+        </div>
+
+      </div>
+
+      <p class="notice">
+        Each lifetime license is valid for one Discord server.
+        Additional Discord servers require additional licenses.
+      </p>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container">
+
+      <h2>Made for Whiteout Survival communities</h2>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>🏰 Rallies</h3>
+          <p>
+            Coordinate rally timing with your alliance through
+            a shared voice countdown.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>⚔️ Events</h3>
+          <p>
+            Keep players synchronized during coordinated
+            Whiteout Survival events.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🌍 Alliance Coordination</h3>
+          <p>
+            Give everyone in the voice channel the same clear
+            countdown at the same time.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+
+<footer>
+  <div class="container">
+
+    <strong>WOS Voice Countdown</strong>
+
+    <p>
+      An independent Discord utility designed for
+      Whiteout Survival communities.
+    </p>
+
+    <p>
+      <a href="#">Privacy Policy</a>
+      ·
+      <a href="#">Terms of Service</a>
+    </p>
+
+    <p>
+      WOS Voice Countdown is an independent project and is not
+      affiliated with or endorsed by Whiteout Survival or its publisher.
+    </p>
+
+    <p>© 2026 WOS Voice Countdown</p>
+
+  </div>
+</footer>
+
+</body>
+</html>
